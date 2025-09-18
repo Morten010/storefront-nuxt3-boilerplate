@@ -1,10 +1,10 @@
 import { createServer } from '@vue-storefront/middleware';
-import consola from 'consola';
-import config from '../middleware.config';
+import { consola } from 'consola';
+import * as config from '../middleware.config';
 
 (async () => {
   const app = await createServer({ integrations: config.integrations });
-  const host = process.argv[2] ?? '0.0.0.0';
+  const host = process.argv[2] ?? 'localhost';
   const port = Number(process.argv[3]) || 4001;
 
   app.listen(port, host, () => {
