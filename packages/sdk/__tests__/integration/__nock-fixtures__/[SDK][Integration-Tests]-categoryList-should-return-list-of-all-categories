@@ -1,0 +1,51 @@
+[
+    {
+        "scope": "https://magento2-instance.vuestorefront.io:443",
+        "method": "GET",
+        "path": "/graphql?query=query+categoryList%7Bcategories%7Bitems%7Bchildren%7Binclude_in_menu+is_anchor+level+name+position+product_count+uid+url_key+url_path+url_suffix+children%7Binclude_in_menu+is_anchor+level+name+position+product_count+uid+url_key+url_path+url_suffix+children%7Binclude_in_menu+is_anchor+level+name+position+product_count+uid+url_key+url_path+url_suffix+children%7Binclude_in_menu+is_anchor+level+name+position+product_count+uid+url_key+url_path+url_suffix+__typename%7D__typename%7D__typename%7D__typename%7Dproduct_count+name+uid+__typename%7D__typename%7D%7D&operationName=categoryList&variables=%7B%7D",
+        "body": "",
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003d598516fda3010c7bf0af2c3f6026301da75487d285bb77512688c54d534a6c84d0c3184248b9d3156f1dde7101a3b8e8bb39685f216db77a7fb9dcff65fb9030ea41074ef800d299a0611462419618a16ece33b9b77b1e744c8df0cb06f7bb1832cec5b0be4c7a0fbba0e30b1a06fbb41b41979e817f240b755073e5c20d005372ea42f496d8096a00ec280608a0316cc60832870629b5a7610fb74e31c638779f4ff4ccf996d1c79d61cadd8c492856860d2f0373192f9105257b940e2c904ff664baf5cbaf0d8a490fe8f3ab02cba0ad136b37729f1ca8c1002ebba82cec8d1192aba8059e6c05a05b037a719d9ec4222dbba8b4cc2d42e9a7f48b79da56b0621d16cc309df87d9653e5bcabc1b0fa53c6e1696f7947e274bff33b4e788ea088c1627e8e7096669805210e3a6caba9a06e3c89f82c06167b2f6a2365a2248898b23a900c586130b30cc17c04dc335a0ef34080f58b22065bcab2e908950be1eed9df5b8965a9a7997842f98564dda8b60d20726f4e779e24e91b8c389bf49c4897b59e482ede399f757117e9df5024a8385ee38b484fbf72a5f8cdb34c08e72a82cf67eaf7d81befe566b730a3b4f1126ee6519c6cda279d59d3c622bfa5b4c00960401d9f8972756d8ffaf467e6ab95412aa2f490cc50d7792d5ca941eed42890e2b2f3a673cd32b85bc50a5bbbd940e2f2c0c9efb502d2c76a7cf25c591090a7e14cdeb7282425708bddff31612a6fcac26ea40072d19554e5846390888b64a39681925aba3540c5c3e997db5625097a1b87a18ad206ce254a515b4d9dfab84e7ae1104d0b9522394202d581e9336f88860a439d26d7e7b2fcff3459aa6de42798499bdcb831e9c6a3b373b79830b29d7dbd45bca95ed259fafa64739d0074c7d4448edf2678c43e64475ed9afd5b190c25ba491aaa81845005d4878caae6be81d476b5afe5db0c762ac12e33ff02627ea9cac743ff2b73043d94633eddf513537a3d49ea2c000b334fe2949becccc8327e8f2630f668edde0764e9a55bf288027e45844504ebf5fa2f3eca13063c160000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx/1.14.2",
+            "Date",
+            "Fri, 26 Jan 2024 10:25:48 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "keep-alive",
+            "Vary",
+            "Accept-Encoding",
+            "X-Magento-Cache-Id",
+            "40eaaed8434b6bc4d35eb631fa2239af78c842214e0e7f4d505856f54f43ffd5",
+            "X-Magento-Tags",
+            "cat_c,cat_c_2",
+            "X-Content-Type-Options",
+            "nosniff",
+            "X-XSS-Protection",
+            "1; mode=block",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "Content-Encoding",
+            "gzip",
+            "X-Varnish",
+            "40839590",
+            "Age",
+            "0",
+            "Pragma",
+            "no-cache",
+            "Expires",
+            "-1",
+            "Cache-Control",
+            "no-store, no-cache, must-revalidate, max-age=0",
+            "Accept-Ranges",
+            "bytes"
+        ],
+        "responseIsBinary": false
+    }
+]

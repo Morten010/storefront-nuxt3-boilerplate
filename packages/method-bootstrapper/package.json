@@ -1,0 +1,15 @@
+{
+  "name": "method-bootstrapper",
+  "private": true,
+  "version": "1.1.0",
+  "description": "",
+  "bin": {
+    "mkmethod": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  }
+}

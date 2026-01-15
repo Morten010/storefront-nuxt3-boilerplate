@@ -1,0 +1,51 @@
+[
+    {
+        "scope": "https://magento2-instance.vuestorefront.io:443",
+        "method": "GET",
+        "path": "/graphql?query=query+productsList%28%24search%3AString%3D%22%22%24filter%3AProductAttributeFilterInput%24pageSize%3AInt%3D10%24currentPage%3AInt%3D1%24sort%3AProductAttributeSortInput%29%7Bproducts%28search%3A%24search+filter%3A%24filter+pageSize%3A%24pageSize+currentPage%3A%24currentPage+sort%3A%24sort%29%7Baggregations%7Battribute_code+label+options%7Blabel+value+count+__typename%7D__typename%7Ditems%7Buid+sku+name+stock_status+only_x_left_in_stock+rating_summary+thumbnail%7Burl+position+disabled+label+__typename%7Durl_key+url_rewrites%7Burl+__typename%7Dprice_range%7Bmaximum_price%7Bfinal_price%7Bcurrency+value+__typename%7Dregular_price%7Bcurrency+value+__typename%7D__typename%7Dminimum_price%7Bfinal_price%7Bcurrency+value+__typename%7Dregular_price%7Bcurrency+value+__typename%7D__typename%7D__typename%7Dcategories%7Buid+name+url_suffix+url_path+breadcrumbs%7Bcategory_name+category_url_path+__typename%7D__typename%7Dreview_count+reviews%7Bitems%7Baverage_rating+ratings_breakdown%7Bname+value+__typename%7D__typename%7D__typename%7D...on+GroupedProduct%7Bitems%7Bproduct%7Bsku+__typename%7D__typename%7D__typename%7D...on+ConfigurableProduct%7Bvariants%7Bproduct%7Buid+sku+name+only_x_left_in_stock+price_range%7Bminimum_price%7Bfinal_price%7Bcurrency+value+__typename%7Dregular_price%7Bcurrency+value+__typename%7D__typename%7D__typename%7Dthumbnail%7Burl+position+disabled+label+__typename%7D__typename%7D__typename%7D__typename%7D__typename%7Dpage_info%7Bcurrent_page+page_size+total_pages+__typename%7Dtotal_count+__typename%7D%7D&operationName=productsList&variables=%7B%22search%22%3A%22%22%2C%22pageSize%22%3A20%2C%22currentPage%22%3A1%2C%22filter%22%3A%7B%22sku%22%3A%7B%22eq%22%3A%22WSH12%22%7D%7D%7D",
+        "body": "",
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003ed5b5b73da3a10fe2b193f43c02614c84c1fda9c4b33677229b4a70f878e471861d4d81223cb214927ffbd2bdbd83236043b26e67478c944abf56ab5fb49df4ac63fb52912483bffa92d389bfa96f0e4ffc8b639b691208c42fb3f1008c1c9c417d8b4d8146be7a04d2cac3534074db003eddba8cd16c943ab3edd6837f54e1b7aef91e3e3506286128bf95468e77a43334df1b8c014b952e143e2c04d60517bfebe59457b6ee4b86821816dc61f4d32551cbd88a41b7cfdc65c4c154f8d624e36124b1f9910ccf5545b46595ba339e32265aa5fd6d49f9cd09321b6980b139daa363b677bce87435c08be9a8b5892978a2be24c5399e8969df337c4dd94a5d2d1fbc4846a48d7f71c32e630ae062c6ae785eb6f8e53c8ed76ca4ef2d6e70b07aba67a654d0db19ac26eb1b8170e17066c9b5cc5f666d4e78550dda24aaf7b5ddde7f63b5fb97838418e32d1ab449437c35be63c620f54d4755f7a358c16884ef1833ae16ee9b8dd701b51629d5cc87d93a66c164372e13052bc5422781db4aa854761971620c19caa041b4bf2173f5acc217840c354dda1f441b14db3b8a398cf187711b5b0394313a802549f93ce93bf569d3547d6438e4a41a3b059b753e429e554d8cc732a20fe38bbbd621b8cb2da8c41ca4ee9ca245dd6f54a734e27b56df68a9522aa1d236567cfe8f7c4a383cd4950e9a9f993e20d09fc88bc6019c43e962f6b46d4b7554b555623d049047643df7da8a0815a7e7c685fdbefdfc320de9d2fcbaad1275d863b7a1e38f60e9d0c7d4a09b54f829255aa0a66dd999e40c20763dae5b539fa7273f18f8c0e751ecd07d3c13361026f078ada39f51da7a1717083daa6e7bb2e825afdbcd76e6862eebb138a88234f283e9711980bb1f0cec7ad71cb4536a682194d42612cd8704eef7d203ac6f18c332a4e09031d3c2568dc82730172983d6e45271e29b1e678dcc2ddc1d9a437b026b3099ebc3bebf73b7dbddfede12e1a4cdee9ddfeb8b51cb73cf8ebcd75a369cb7acb7411b8ae9ffe58c84c2c984782f045b398120f4d1c2881a2b6528de4442a958cdbd0b74b392f48ba9caf79871fc322e70e3579f870d38b1e96fd1c2f39242dca5910a01ce5d3b9709df5e1be7267183e1d202c7c7829cf42e356086faf1935032371eb55034079eb602b58238125da4c8ab7579aaec2bdfcf9973109ab2938309b1c51c827e0d7450fc4f55d333c47836046287292a6e5738ea92513fe75f447b2cacfba6bc35c310ab00084c0daf51dc45f63220f81e1c11e3a5d424b796cb45fedf166135b3d5eeb04e930083f7445770304af6d70ef93ed6c7513205796e7cf66e40184ab4c4b21d468f3154a4034e1184d2d0e7b94b75aef290756170f5f60df0841160d7aa90c9a5c1aec34ec1a38d7bd8099c597206bb38ae5393349b9fd313698658c8d53b29529c57717656694de6ef63dbf46d65e92908d16b3497875009f3e2b01cc9e5d5f8ae4b67db53052bfcb857a4ff0d28c4a8bb39520b82a4caa04748f39b0951972379420edf68ac83d538e7937654b1aa846030d434de58260030d0e83f122f54c14534a61a1b6e68a51d8137d4f9ebc2bec49674f9ed4959eaddd9edc9cef1127888a1055519116d47cab5dfae9eaf37a19da34facdd50dd8e67a54d5da567eae93f5ef447dbf7519ad26786b3d9dea1c1177e1e04825d37bc1e88cd83e973efc1b42335850f9c8cc1c90a44bf18dea7668c66a476c1e043617413e2a05679ce27ad0b9cc43677849bf1d9aa1ce1be0f2ecf5b8dc6ce237c125c7d34a411926b716445e7fc82272b013930fde92c9eb3b76ff7f505935930fea65f2eb9c1a73b01b930fde94c98fd8ac81c907353379f6225efaf432930fde90c98fb87c63261fd4cae4d9dab2d3de85c915ad232a0f02951533b992e05a907993ad31c1a55d985c553b62f320b0593593ab29ae079dd93a137c7a91c9639d232e0f02979532799cdc3a10d9becad92ff59d985c3f32f961a1b26a26d76b65f276ce7b1f70692726d78f4c7e60d8ac9cc9f57a99bc9df3ee077c7a99c9f523931f122eab6572bd5626cf39931b3b31b97164f2c34265d54c6ed4cbe439ef7dc0a59d98dc3832f98161b37226376a66f29c773fe0d3cb4c6e1c99fc9070592d931b6fc1e4995f882a4ab121f97372f9533e42672c49b030a530f8f423e80d3e2a0a7ea42398909002a197fd32648411b7e643ecf98eb805954b69f479f5d086cf496e571f8b3f3f3fff02d7e0e9ba433e0000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx/1.14.2",
+            "Date",
+            "Tue, 23 Jan 2024 10:42:24 GMT",
+            "Content-Type",
+            "application/json",
+            "Content-Length",
+            "1625",
+            "Connection",
+            "keep-alive",
+            "Vary",
+            "Accept-Encoding",
+            "X-Magento-Cache-Id",
+            "40eaaed8434b6bc4d35eb631fa2239af78c842214e0e7f4d505856f54f43ffd5",
+            "X-Magento-Tags",
+            "cat_p,cat_p_2046,cat_c,cat_c_20,cat_c_22,cat_c_28,cat_c_34",
+            "X-Content-Type-Options",
+            "nosniff",
+            "X-XSS-Protection",
+            "1; mode=block",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "Content-Encoding",
+            "gzip",
+            "X-Varnish",
+            "39462148 39326622",
+            "Age",
+            "640",
+            "Pragma",
+            "no-cache",
+            "Expires",
+            "-1",
+            "Cache-Control",
+            "no-store, no-cache, must-revalidate, max-age=0",
+            "Accept-Ranges",
+            "bytes"
+        ],
+        "responseIsBinary": false
+    }
+]

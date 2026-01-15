@@ -1,0 +1,83 @@
+[
+    {
+        "scope": "https://magento2-instance.vuestorefront.io:443",
+        "method": "POST",
+        "path": "/graphql",
+        "body": {
+            "operationName": "setShippingAddressesOnCart",
+            "variables": {
+                "input": {
+                    "cart_id": "pCS0ykep1l3wGlPKSyWLJq5fb1DxIQcp",
+                    "shipping_addresses": [
+                        {
+                            "address": {
+                                "firstname": "John",
+                                "lastname": "Doe",
+                                "city": "New York",
+                                "country_code": "US",
+                                "street": [
+                                    "Street 1",
+                                    "Street 2"
+                                ],
+                                "telephone": "123 123 123",
+                                "region": "AL",
+                                "postcode": "10001",
+                                "save_in_address_book": false
+                            }
+                        }
+                    ]
+                }
+            },
+            "query": "mutation setShippingAddressesOnCart($input: SetShippingAddressesOnCartInput) {\n  setShippingAddressesOnCart(input: $input) {\n    cart {\n      shipping_addresses {\n        city\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}"
+        },
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003ab564a492c4954b2aa562a4e2d09cec82c28c8cc4b774c49294a2d2e4e2df6cf734e2c2a01c92643e962a892f844981a25ab68a0746649a59295925f6ab942647e51b6928e527c7c4965416a5e626e2a501c6630c834a8e14ab5b1688ac056d5a2ebc4e92affd2928252a086da5a00221b2562c4000000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx/1.14.2",
+            "Date",
+            "Wed, 14 Feb 2024 15:55:03 GMT",
+            "Content-Type",
+            "application/json",
+            "Content-Length",
+            "129",
+            "Connection",
+            "keep-alive",
+            "Vary",
+            "Accept-Encoding",
+            "Set-Cookie",
+            "PHPSESSID=opiqmaobcm9ebf9vc49mnucof8; expires=Wed, 14-Feb-2024 16:55:03 GMT; Max-Age=3600; path=/; domain=magento2-instance.vuestorefront.io; secure; HttpOnly; SameSite=Lax",
+            "Set-Cookie",
+            "private_content_version=77ce940f913da0c1d450f99358a65a3e; expires=Sat, 11-Feb-2034 15:55:03 GMT; Max-Age=315360000; path=/; secure; SameSite=Lax",
+            "Set-Cookie",
+            "private_content_version=28c827b69b7c44cb99d31d8d10cd465b; expires=Sat, 11-Feb-2034 15:55:03 GMT; Max-Age=315360000; path=/; secure; SameSite=Lax",
+            "Set-Cookie",
+            "private_content_version=3ab12c04af6f81a2ca1f46e995a32213; expires=Sat, 11-Feb-2034 15:55:03 GMT; Max-Age=315360000; path=/; secure; SameSite=Lax",
+            "X-Magento-Cache-Id",
+            "b309d3e32ec01e2fccaf4dd92e430e3576b7d1135b436c3a91b354bb36cec2ec",
+            "X-Content-Type-Options",
+            "nosniff",
+            "X-XSS-Protection",
+            "1; mode=block",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "Content-Encoding",
+            "gzip",
+            "X-Varnish",
+            "46256258",
+            "Age",
+            "0",
+            "Pragma",
+            "no-cache",
+            "Expires",
+            "-1",
+            "Cache-Control",
+            "no-store, no-cache, must-revalidate, max-age=0",
+            "Accept-Ranges",
+            "bytes"
+        ],
+        "responseIsBinary": false
+    }
+]

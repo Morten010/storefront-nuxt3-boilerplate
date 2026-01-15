@@ -1,0 +1,73 @@
+[
+    {
+        "scope": "https://magento2-instance.vuestorefront.io:443",
+        "method": "POST",
+        "path": "/graphql",
+        "body": {
+            "operationName": "addProductsToCart",
+            "variables": {
+                "cartId": "pCS0ykep1l3wGlPKSyWLJq5fb1DxIQcp",
+                "cartItems": [
+                    {
+                        "quantity": 1,
+                        "sku": "WSH12",
+                        "selected_options": [
+                            "Y29uZmlndXJhYmxlLzkzLzUz",
+                            "Y29uZmlndXJhYmxlLzE0NC8xNzE="
+                        ]
+                    }
+                ]
+            },
+            "query": "mutation addProductsToCart($cartId: String!, $cartItems: [CartItemInput!]!) {\n  addProductsToCart(cartId: $cartId, cartItems: $cartItems) {\n    cart {\n      id\n      email\n      is_virtual\n      applied_coupons {\n        code\n        __typename\n      }\n      prices {\n        subtotal_with_discount_excluding_tax {\n          value\n          currency\n          __typename\n        }\n        subtotal_excluding_tax {\n          value\n          currency\n          __typename\n        }\n        subtotal_including_tax {\n          value\n          currency\n          __typename\n        }\n        applied_taxes {\n          amount {\n            value\n            currency\n            __typename\n          }\n          label\n          __typename\n        }\n        discounts {\n          amount {\n            value\n            currency\n            __typename\n          }\n          label\n          __typename\n        }\n        grand_total {\n          value\n          currency\n          __typename\n        }\n        __typename\n      }\n      items {\n        uid\n        product {\n          uid\n          __typename\n          sku\n          name\n          stock_status\n          only_x_left_in_stock\n          rating_summary\n          thumbnail {\n            url\n            position\n            disabled\n            label\n            __typename\n          }\n          url_key\n          url_rewrites {\n            url\n            __typename\n          }\n          price_range {\n            maximum_price {\n              final_price {\n                currency\n                value\n                __typename\n              }\n              regular_price {\n                currency\n                value\n                __typename\n              }\n              __typename\n            }\n            minimum_price {\n              final_price {\n                currency\n                value\n                __typename\n              }\n              regular_price {\n                currency\n                value\n                __typename\n              }\n              __typename\n            }\n            __typename\n          }\n          categories {\n            uid\n            name\n            url_suffix\n            url_path\n            url_key\n            include_in_menu\n            breadcrumbs {\n              category_name\n              category_url_path\n              __typename\n            }\n            __typename\n          }\n          review_count\n          reviews {\n            items {\n              average_rating\n              ratings_breakdown {\n                name\n                value\n                __typename\n              }\n              __typename\n            }\n            __typename\n          }\n        }\n        prices {\n          row_total {\n            value\n            currency\n            __typename\n          }\n          row_total_including_tax {\n            value\n            currency\n            __typename\n          }\n          total_item_discount {\n            value\n            currency\n            __typename\n          }\n          __typename\n        }\n        quantity\n        ... on ConfigurableCartItem {\n          configurable_options {\n            configurable_product_option_uid\n            option_label\n            configurable_product_option_value_uid\n            value_label\n            __typename\n          }\n          configured_variant {\n            sku\n            name\n            only_x_left_in_stock\n            price_range {\n              minimum_price {\n                final_price {\n                  currency\n                  value\n                  __typename\n                }\n                regular_price {\n                  currency\n                  value\n                  __typename\n                }\n                __typename\n              }\n              __typename\n            }\n            thumbnail {\n              url\n              __typename\n            }\n            __typename\n          }\n          __typename\n        }\n        ... on BundleCartItem {\n          bundle_options {\n            uid\n            label\n            type\n            values {\n              id\n              label\n              price\n              quantity\n              __typename\n            }\n            __typename\n          }\n          __typename\n        }\n        __typename\n      }\n      total_quantity\n      shipping_addresses {\n        firstname\n        lastname\n        street\n        city\n        company\n        region {\n          code\n          region_id\n          label\n          __typename\n        }\n        postcode\n        telephone\n        country {\n          code\n          label\n          __typename\n        }\n        selected_shipping_method {\n          carrier_code\n          carrier_title\n          method_code\n          method_title\n          amount {\n            value\n            currency\n            __typename\n          }\n          __typename\n        }\n        __typename\n      }\n      billing_address {\n        firstname\n        lastname\n        street\n        city\n        company\n        region {\n          code\n          region_id\n          label\n          __typename\n        }\n        postcode\n        telephone\n        country {\n          code\n          label\n          __typename\n        }\n        __typename\n      }\n      __typename\n    }\n    user_errors {\n      code\n      message\n      __typename\n    }\n    __typename\n  }\n}"
+        },
+        "status": 200,
+        "response": [
+            "1f8b0800000000000003ed5b6d73da3810fe2b8c3f03010229c94c668e925c8f36901792e9e59a8c47d80294d8962bcbbc65f2df6f25cb6083a1bc265c2f1f9a6269b5da7db45aef3e032f9a8938d24e5e34649a578c9abec1bd5b5a458c8b4143fd4f4ced4473abcddcf019bb79ebb0ffc5bafad61c7ebff8fab3d46ee5cf06b56bc3d5d21ab611b140b4e7b5b336ea6087d32c7138ee30c40975b21c7b3ceb7b98fdd111925983dab08a787a8f30ee2358da469687d31a725d8b605337a8ef52c7d34e1cdfb2d29acb88813d6191e7b738e5c8d2fb847775937820e9701d0f0ccb3789d3d1391a08b91eb27cac9de48f0ed39ae133861d630806de35cf60635de743173bc80609ad4e1d3cd45ed313d55b55469ccd9585a8800681c28fc7b4167a3e8608a0764042ec19dda5bcfc2eb15111095701ea304538b6c5c62f9a2f43a27e5be9c3bf534d1c8d0c1eb16730d7187586d37b54a9d3261d9fa1968555b48188f7ec0b5d57b9223c28c9a6ef62e6d01e4a355dca78ea0a39529453e359f738e23ed8a1d51a7af3f6b2fa0d66a8630df5816ee13607ac7529186222a20f80f77cdb460cdc2f97d21aeffa76cb91e10a163311b55dce5defe4e1e0e140c56e21431cd8cb3170b6e743e85286db8c3a3c4b28c86093a0870303ee8f453b0f070a00316274f1c3012e1d175b9f8e8d56bb855b47c572f9b09c2f973ee1123a6e1de54b65d0008be0af9b2b66e0d4863a5c0947cf679fdc8ec0937a44dc99d0073868819a193e5ba885adf940c5605750d7845be218c15dfd198b38f0c2d5194facceb8c16a21c0709fc179abe39600254967bbdcb6a637bc63d64db01cb60b57dbd879386851cea9ed65e48358af3e6ea61ab0b7a940cb0b9522cbda54e916ec9a75792d7d8f2af3e970b7e10421606d3420b66feb72580cb489034966fc3873d5551e2896e6dd7a863bbe85d8262a92624ee60e316913672d8b0f731b5b3c5fc5428ba72661f446c20f5370e971873282e3c9f0fc7492c0ead85117c9f3db6d02295f0bcf590cba88778300d1a2f731780ede1558e4311880e4984f6b2d86916930485ae3543f95a8a549c35b8655042aa3ea11a33e07a1b89c61b1c88d59191fffa5b53f5e42c0867a0c9df1e80c2231d73e8f95c9abb09cdb9d88db2227aee3742443c5fc8f8ebea9f7e9595d93239da36ffa18378676545b03dac40c9d006a303a036a6ed50bf028f2438fe0be2ecb23485be1802c1f27850cea6106af453da811a036c885f582a78b2d9f4dda77a4a4dae726101c6717ad38e7757b23b753e233e8c68424bcfb6b493eb7b229a5df0b9485d3501abf467b1346fb3305b8786b2e597f8f97cfed195650a61441b88f9ba488a2dcfa4d410d544e1a839f3edc5ec28732fd19912a5fa7aebcf5411e8c4ea87a5909e84172b92f1cfbffd89663fefdb57b6f0fac8b9151ac9372a9de3f154947c986b56f955a9469e9857aa5a773b53f8f2e4677a3305ac68abf400e99c9954d6c61836333dac45cca4d82c4bcae7383c6d97582734d32c21bf9769e6b5441f9c8389df1ef70e6522c72ee716205349f3dc4080aa268d2b8650e8b9910b4051d5c546c51c3365dedae593bbe5fb5bba076dcb7c6134e23de792e6c1de341436c77d2c8cf6489482885192356a2d5069773b883fa536554afc82bbf347ff0bdf9573e3f09bf9a8352556abb0c7b1e4471aad98520dc1a8370b41f0c421f1a4af8eb75f3f94c4b5cf0b5288479502dc921c05dcc1893e5194f2d9f4322248a2fdf52f769aca6558f52c9f869c32d0c6a89641814ab981127c330a803d5a6b7b1f2ed98988cc27a4ab7c82e1c6f9e6fe7aad809bbf07e16afcc2e3c55226dd7776a2fc52ff4e974ef1a8e6c936378aaadc53124057122cfb0b4cd09bd76885452771ceaddb8257e8ab20d327daeeb7f3c95c5d0989a78733056261fe69cefe604c47504ed73c8cfa99b717e5e02f645e93d06f8ecdc3bf212c5951bdfc2071bf07614c93b1dcfc6bcc471798bbcc40acade9c97286c9997a8f5eba34aef32a0d777c34bf467faf6cf029dddd312816ff5dbebdc0e6989f3595aa250de222d21fbc14ca19c51a02dea0b23626f414bec63d1b9f7ddecdbd112c3c6d9f93c5a22d7e8ac4e4b1462e5ca334addf88e03e973cba4c4a7dc9e1d6321895e5a969548466a494e028bc519162cfe15239120bc5d3e62a30d16b311dbb07d07feafa3f2fffc2d87c2e6df7298afe28387f8e0213e78880f1e622b3cc41e75ff85952dc9efc892a3952d39fccdc8998d8988c2f23dffaf89881594fde7bf2051eb37ceee774b44bcdf172402e77e0326a2202886a96f4824743851a9376022f6b2ecdcff1676b754c46398942639035ece5e97b8aec874c8340577a58af236611e57eabed2ae881b0b8d47ce2896ec02b800f1f8436bca4f29f11a541f0b9a085eb989d6c0fdd43d65cff252d92e728663a6017764c72e2eb12914572eb4705417b72b3fe9db2bf001d968862301ff2a81e93781b657c90570a5115e5c396117877be6762186c458e130a5fe499b20370b9e636cc55d539bec2b1fe66d59556bc52f72d445d6c788da9877a9a97eef04ed0ed395feb68538bc4b65965133701e9698fa13a65237c15cb03e61919a18af21036cc230b2a7de322bbcae1273525379520f1c991153d3113c6494b5886545222ac81b1fe1b45a38c5bb8800d118d0095a2457e5413461c62853bfe48a4955a67f8d77e973d78785afafff024998c370b3370000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx/1.14.2",
+            "Date",
+            "Mon, 05 Feb 2024 11:51:46 GMT",
+            "Content-Type",
+            "application/json",
+            "Transfer-Encoding",
+            "chunked",
+            "Connection",
+            "keep-alive",
+            "Vary",
+            "Accept-Encoding",
+            "Set-Cookie",
+            "PHPSESSID=rr9rlch7akdbctuuhb8sgttj7n; expires=Mon, 05-Feb-2024 12:51:46 GMT; Max-Age=3600; path=/; domain=magento2-instance.vuestorefront.io; secure; HttpOnly; SameSite=Lax",
+            "Set-Cookie",
+            "private_content_version=100b3bd6e7fba4d55c1e6dae7609da4c; expires=Thu, 02-Feb-2034 11:51:46 GMT; Max-Age=315360000; path=/; secure; SameSite=Lax",
+            "Set-Cookie",
+            "private_content_version=cbea051575a24a31b86d826b57f8d426; expires=Thu, 02-Feb-2034 11:51:46 GMT; Max-Age=315360000; path=/; secure; SameSite=Lax",
+            "Set-Cookie",
+            "private_content_version=5439dc3ab3ab777f6384e80d6e0e804f; expires=Thu, 02-Feb-2034 11:51:46 GMT; Max-Age=315360000; path=/; secure; SameSite=Lax",
+            "X-Magento-Cache-Id",
+            "40eaaed8434b6bc4d35eb631fa2239af78c842214e0e7f4d505856f54f43ffd5",
+            "X-Content-Type-Options",
+            "nosniff",
+            "X-XSS-Protection",
+            "1; mode=block",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "Content-Encoding",
+            "gzip",
+            "X-Varnish",
+            "44026469",
+            "Age",
+            "0",
+            "Pragma",
+            "no-cache",
+            "Expires",
+            "-1",
+            "Cache-Control",
+            "no-store, no-cache, must-revalidate, max-age=0",
+            "Accept-Ranges",
+            "bytes"
+        ],
+        "responseIsBinary": false
+    }
+]

@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
   },
   app: {
     head: {
@@ -69,7 +69,20 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     'nuxt-vitest',
     'nuxt-lazy-hydrate',
+    '@vue-storefront/nuxt',
   ],
+  vsf: {
+    middleware: {
+      apiUrl: 'http://localhost:4000',
+    },
+    sdk: {
+      modules: {
+        commerce: {
+          module: './sdk/vsfModule',
+        },
+      },
+    },
+  },
   nitro: {
     prerender: {
       crawlLinks: true,

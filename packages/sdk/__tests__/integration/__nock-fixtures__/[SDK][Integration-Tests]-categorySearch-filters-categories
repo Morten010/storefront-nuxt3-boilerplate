@@ -1,0 +1,51 @@
+[
+    {
+        "scope": "https://magento2-instance.vuestorefront.io:443",
+        "method": "GET",
+        "path": "/graphql?query=query+categorySearch%28%24filters%3ACategoryFilterInput%29%7BcategoryList%28filters%3A%24filters%29%7Binclude_in_menu+is_anchor+level+name+position+product_count+uid+url_key+url_path+url_suffix+children%7Binclude_in_menu+is_anchor+level+name+position+product_count+uid+url_key+url_path+url_suffix+__typename%7D__typename%7D%7D&operationName=categorySearch&variables=%7B%22filters%22%3A%7B%22category_uid%22%3A%7B%22in%22%3A%5B%22MjA%3D%22%5D%7D%7D%7D",
+        "body": "",
+        "status": 200,
+        "response": [
+            "1f8b08000000000000039d914f4bc43010c5bfcb9ce39f5d51a1e041c583a0b7050f2a2126b3369a664232514be97737ae45add595f598f7de0cbf97e9c028565075a015e33dc5f6c22686eaba03ebb5cb06a5f5b2419fa19a09b0492aaf6b8aab97c3277450cd0578d5205470452509020225cb96fcca0b914cd62c35655f361f1e08c8d694f4e5c3f15109e7e8e423b645781ec6df94a0b8fe26a5bc5cda97226ed7dcb822eada3a138bbf11eede07ee82421ad1ce26b4fbbb9fb467635a2ed35bbf21dfec4cec09be94dc061c584e87ef5f4444e8c5bffa9c103335e98f03ccbf1ce07c5ce9ee7dc19a563f25362976bbdeedfb57822b228691020000"
+        ],
+        "rawHeaders": [
+            "Server",
+            "nginx/1.14.2",
+            "Date",
+            "Tue, 23 Jan 2024 10:42:48 GMT",
+            "Content-Type",
+            "application/json",
+            "Content-Length",
+            "254",
+            "Connection",
+            "keep-alive",
+            "Vary",
+            "Accept-Encoding",
+            "X-Magento-Cache-Id",
+            "40eaaed8434b6bc4d35eb631fa2239af78c842214e0e7f4d505856f54f43ffd5",
+            "X-Magento-Tags",
+            "cat_c,cat_c_20",
+            "X-Content-Type-Options",
+            "nosniff",
+            "X-XSS-Protection",
+            "1; mode=block",
+            "X-Frame-Options",
+            "SAMEORIGIN",
+            "Content-Encoding",
+            "gzip",
+            "X-Varnish",
+            "39462198 39312425",
+            "Age",
+            "2303",
+            "Pragma",
+            "no-cache",
+            "Expires",
+            "-1",
+            "Cache-Control",
+            "no-store, no-cache, must-revalidate, max-age=0",
+            "Accept-Ranges",
+            "bytes"
+        ],
+        "responseIsBinary": false
+    }
+]

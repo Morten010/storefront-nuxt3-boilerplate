@@ -19,6 +19,10 @@
       ],
       "cache": false
     },
+    "build:package": {
+      "dependsOn": ["^build"],
+      "outputs": ["lib/**", "server/**"]
+    },
     "start": {
       "outputs": []
     },
